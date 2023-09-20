@@ -10,20 +10,22 @@ public class Course {
         this.grade = grade;
     }
 
+    public double multiplyCreditAndCourseGrade() {
+        return credit * getGradeToNumber();
+    }
     public int getCredit() {
         return credit;
     }
+
     public String getGrade(){
         return grade;
     }
 
     public double getGradeToNumber() {
-        System.out.println("이건 뭐야"+this.grade);
         double grade = 0;
         switch (this.grade) {
             case "A+":
                 grade = 4.5;
-                System.out.println("이게"+ grade);
                 break;
             case "A":
                 grade = 4.0;
